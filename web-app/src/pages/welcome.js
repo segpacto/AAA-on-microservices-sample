@@ -1,8 +1,9 @@
 import logo from '../logo.svg';
 
 export const WelcomePage = () => {
-    return (<div>
-        <header className="App-header">
+  return (
+    <div>
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -16,5 +17,6 @@ export const WelcomePage = () => {
           Learn React
         </a>
       </header>
-    </div>)
-}
+    </div>
+  );
+};

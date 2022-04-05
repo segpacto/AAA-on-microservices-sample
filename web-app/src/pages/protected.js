@@ -1,5 +1,3 @@
-
-
 export const ProtectedPage = () => {
-    return <>My Secret</>
-}
+  return <>My Secret</>;
+};

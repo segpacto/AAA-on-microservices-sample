@@ -1,18 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import { useKeycloak } from "../hooks/keycloak";
+import { useKeycloak } from '../hooks/keycloak';
 
 export const AuthContext = React.createContext();
 
-export const AuthContextProvider = ({children}) => {
-    const [keycloak, userInfo] = useKeycloak();
+export const AuthContextProvider = ({ children }) => {
+  const [keycloak, userInfo] = useKeycloak();
 
-    return (
-        <AuthContext.Provider value={{ keycloak, userInfo }}>
-          {children}
-        </AuthContext.Provider>
-      )
-}
+  return <AuthContext.Provider value={{ keycloak, userInfo }}>{children}</AuthContext.Provider>;
+};
 
 /**
  * Documentation indicates that should be implemented on the children
@@ -21,4 +17,4 @@ export const AuthContextProvider = ({children}) => {
  */
 export const useAuthInfo = () => {
   return useContext(AuthContext);
-}
+};

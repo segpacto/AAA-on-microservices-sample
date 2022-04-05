@@ -1,9 +1,9 @@
-import { useAuthInfo } from "../components/auth-context-provider";
+import { useAuthInfo } from '../components/auth-context-provider';
 
-export const PrivateRoute = ({children}) => {
-    const { keycloak } = useAuthInfo()
-    
-    const authenticated = keycloak && keycloak.authenticated;
+export const PrivateRoute = ({ children }) => {
+  const { keycloak } = useAuthInfo();
 
-    return authenticated ? children : null;
-}
+  const authenticated = keycloak && keycloak.authenticated;
+
+  return authenticated ? children : null;
+};
